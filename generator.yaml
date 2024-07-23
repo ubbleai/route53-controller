@@ -73,6 +73,10 @@ resources:
         from:
           operation: ChangeResourceRecordSets
           path: ChangeBatch.Changes.ResourceRecordSet.HealthCheckId
+      # HealthCheckId:
+      #   references:
+      #     resource: HealthCheck
+      #     path: Status.ID
       # Changing this value after a CR has been created could result in orphaned record sets
       HostedZoneId:
         references:
